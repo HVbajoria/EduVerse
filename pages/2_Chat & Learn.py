@@ -15,6 +15,10 @@ st.set_page_config(
      initial_sidebar_state="expanded", 
  ) 
 
+
+if 'username' not in st.session_state:
+    st.session_state["username"]="User"
+    
 import docx
 
 def bot_response(knowledge, question):

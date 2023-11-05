@@ -30,6 +30,9 @@ def authenticate_client():
 
 client = authenticate_client()
 
+if 'username' not in st.session_state:
+    st.session_state["username"]="User"
+
 hide_default_format = """
        <style>
        #MainMenu {visibility: hidden; }

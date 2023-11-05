@@ -23,6 +23,9 @@ st.set_page_config(
      initial_sidebar_state="expanded", 
  ) 
 
+
+if 'username' not in st.session_state:
+    st.session_state["username"]="User"
 # Authenticate the client using your key and endpoint 
 def authenticate_client():
     ta_credential = AzureKeyCredential(key)

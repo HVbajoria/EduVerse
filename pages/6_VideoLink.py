@@ -11,6 +11,10 @@ st.set_page_config(
      layout="wide", 
      initial_sidebar_state="expanded", 
  ) 
+
+
+if 'username' not in st.session_state:
+    st.session_state["username"]="User"
 # Custom CSS style for the app
 st.markdown(
     """

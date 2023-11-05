@@ -76,14 +76,12 @@ def hide_page(name: str):
 
 clear_all_but_first_page()
 
-logged_in = False
-
 st.session_state["username"]="User"
 
 # Main function
 def main():
     # """Login page"""
-    
+    logged_in = False
     hide_default_format = """ 
         <style> 
         #MainMenu {visibility: show; } 
