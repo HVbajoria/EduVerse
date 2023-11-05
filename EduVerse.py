@@ -168,11 +168,11 @@ text-align: center;
             st.warning("Incorrect Username/Password")
     
     if logged_in:
-        # show_all_pages()
-        # hide_page(DEFAULT_PAGE.replace(".py", ""))
+        show_all_pages()
+        hide_page(DEFAULT_PAGE.replace(".py", ""))
         logged_in=False
         user_info=""
-        # switch_page('welcome')
+        switch_page('welcome')
     else:
         clear_all_but_first_page()
 
