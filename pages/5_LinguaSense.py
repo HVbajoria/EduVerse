@@ -9,7 +9,6 @@ from gtts import gTTS
 import os
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.textanalytics import TextAnalyticsClient
-from dotenv import dotenv_values
 
 key = st.secrets['key_sentiment']
 endpoint = st.secret['endpoint_sentiment']
@@ -85,7 +84,6 @@ def analyze_sentiment(text) -> None:
     import os
     from azure.core.credentials import AzureKeyCredential
     from azure.ai.textanalytics import TextAnalyticsClient
-    from dotenv import dotenv_values
 
     endpoint_sentiment = "https://briefwise.cognitiveservices.azure.com/"
     key_sentiment = "f2f8752305334b0ea833b1fd5d26f249"
