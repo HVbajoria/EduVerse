@@ -121,7 +121,9 @@ def main():
         3. **Keyword-Powered Notes**: Take notes like a pro! Our Note Maker extracts keywords and lets you download them in bold format - powered by Azure Keyword Extractor Feature.
    
         4. **LinguaBrief**: Unlock the power of instant translation and summarization with our Text Summarizer, backed by Azure AI Text Summarizer and Translator.
-        """)
+        
+        5. **LinguaSense:** Seamlessly analyze sentiment, translate text, and convert it to audio using Azure AI Language Service and gTTS.
+                """)
 
     st.markdown(
         "<h10 style='text-align: left; color: #ffffff;'> If you do not have an account, create an accouunt by select SignUp option.</h10>",
