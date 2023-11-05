@@ -2,14 +2,12 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 st.set_page_config( 
-     page_title="EduVerse", 
-     page_icon="🏫", 
      layout="wide", 
      initial_sidebar_state="expanded", 
  ) 
+
 hide_default_format = """ 
         <style> 
-        #MainMenu {visibility: show; } 
         footer {visibility: hidden;} 
         </style> 
         """ 
@@ -30,8 +28,8 @@ color2 = "#0fab7b"
 text = "EduVerse"
   
 left_co, cent_co,last_co = st.columns(3)
-# with cent_co:
-#     st.image("images/logo.png", width=200)
+with cent_co:
+    st.image("images/logo.png", width=200)
 
 styled_text = gradient_text(text, color1, color2)
 st.write(f"<div style='text-align: center;'>{styled_text}</div>", unsafe_allow_html=True)
@@ -47,6 +45,8 @@ st.markdown("""
    
 4. **LinguaBrief**: Unlock the power of instant translation and summarization with our Text Summarizer, backed by Azure AI Text Summarizer and Translator.
  """)
+
+
 
 footer="""<style>
 
