@@ -11,7 +11,6 @@ auth0_client_secret = "AhmJasxlnHfhl2Eop4krFvO_JEW9OTmuD7twFoU6xpX6ZBbMsKnUDMziu
 
 from EduVerse import clear_all_but_first_page
 if 'username' not in st.session_state:
-    clear_all_but_first_page()
     st.session_state["username"]="User"
     switch_page('eduverse')
 
