@@ -176,7 +176,7 @@ text-align: center;
     if localStorage.getItem("logged_in")=="True":
         show_all_pages()
         hide_page(DEFAULT_PAGE.replace(".py", ""))
-        localStorage.clear()
+        localStorage.setItem("logged_in","False")
         switch_page('welcome')
     else:
         clear_all_but_first_page()
