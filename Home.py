@@ -27,7 +27,7 @@ def gradient_text(text, color1, color2):
 
 color1 = "#0d3270"
 color2 = "#0fab7b"
-text = "EduSync360"
+text = "EduVerse"
   
 left_co, cent_co,last_co = st.columns(3)
 # with cent_co:
