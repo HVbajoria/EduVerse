@@ -173,6 +173,7 @@ text-align: center;
     if st.session_state["logged_in"]:
         show_all_pages()
         hide_page(DEFAULT_PAGE.replace(".py", ""))
+        del st.session_state["logged_in"]
         switch_page('welcome')
     else:
         clear_all_but_first_page()

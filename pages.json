@@ -1,0 +1,44 @@
+{
+    "68b5588855b7b097533641e1c82349da": {
+        "page_script_hash": "68b5588855b7b097533641e1c82349da",
+        "page_name": "EduVerse",
+        "icon": "",
+        "script_path": "/workspaces/EduVerse/EduVerse.py"
+    },
+    "354d46b61147b8bbfb39dd794186af90": {
+        "page_script_hash": "354d46b61147b8bbfb39dd794186af90",
+        "page_name": "Welcome",
+        "icon": "",
+        "script_path": "/workspaces/EduVerse/pages/1_Welcome.py"
+    },
+    "e476a0f5f6a82bf98b8fcafe0e94f251": {
+        "page_script_hash": "e476a0f5f6a82bf98b8fcafe0e94f251",
+        "page_name": "Chat_&_Learn",
+        "icon": "",
+        "script_path": "/workspaces/EduVerse/pages/2_Chat & Learn.py"
+    },
+    "c51c784cb98e7930f527ba51f7f4a35d": {
+        "page_script_hash": "c51c784cb98e7930f527ba51f7f4a35d",
+        "page_name": "Keyword-Powered_Notes",
+        "icon": "",
+        "script_path": "/workspaces/EduVerse/pages/3_Keyword-Powered Notes.py"
+    },
+    "8a1a0ce9b00f6957375621dfed7acee3": {
+        "page_script_hash": "8a1a0ce9b00f6957375621dfed7acee3",
+        "page_name": "LinguaBrief",
+        "icon": "",
+        "script_path": "/workspaces/EduVerse/pages/4_LinguaBrief.py"
+    },
+    "8acb967db2a5827d7f2a802be0ed906b": {
+        "page_script_hash": "8acb967db2a5827d7f2a802be0ed906b",
+        "page_name": "LinguaSense",
+        "icon": "",
+        "script_path": "/workspaces/EduVerse/pages/5_LinguaSense.py"
+    },
+    "b6810764218844d16e593acdc7eb47c2": {
+        "page_script_hash": "b6810764218844d16e593acdc7eb47c2",
+        "page_name": "VideoLink",
+        "icon": "",
+        "script_path": "/workspaces/EduVerse/pages/6_VideoLink.py"
+    }
+}
