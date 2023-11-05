@@ -9,6 +9,7 @@ blinker==1.6.2
 bs4==0.0.1
 cachetools==5.3.1
 Pillow==9.0.0
+streamlit-auth0-component
 certifi==2023.5.7
 streamlit_extras
 cffi==1.15.1
