@@ -8,11 +8,9 @@ domain = "dev-qzlbx0jqzsgjkeaf.us.auth0.com"
 clientId = "MxxNJ7qlS1CLzusDdY10wIjYYStaswk4"
 auth0_client_secret = "AhmJasxlnHfhl2Eop4krFvO_JEW9OTmuD7twFoU6xpX6ZBbMsKnUDMziuc4ZGRg2"
 
-
-from EduVerse import clear_all_but_first_page
 if 'username' not in st.session_state:
     st.session_state["username"]="User"
-    switch_page('eduverse')
+    switch_page('logout')
 
 hide_default_format = """ 
         <style> 
