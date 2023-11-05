@@ -11,7 +11,7 @@ from azure.core.credentials import AzureKeyCredential
 from azure.ai.textanalytics import TextAnalyticsClient
 
 key = st.secrets['key_sentiment']
-endpoint = st.secret['endpoint_sentiment']
+endpoint = st.secrets['endpoint_sentiment']
 
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
