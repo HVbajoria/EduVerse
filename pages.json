@@ -1,6 +1,6 @@
 {
-    "9436cb5dc87d60f1d3b72a2b8fe133ce": {
-        "page_script_hash": "9436cb5dc87d60f1d3b72a2b8fe133ce",
+    "68b5588855b7b097533641e1c82349da": {
+        "page_script_hash": "68b5588855b7b097533641e1c82349da",
         "page_name": "EduVerse",
         "icon": "",
         "script_path": "/workspaces/EduVerse/EduVerse.py"
@@ -29,10 +29,16 @@
         "icon": "",
         "script_path": "/workspaces/EduVerse/pages/4_LinguaBrief.py"
     },
-    "645432a88c0f52b7d3b6be3a521551ee": {
-        "page_script_hash": "645432a88c0f52b7d3b6be3a521551ee",
+    "8acb967db2a5827d7f2a802be0ed906b": {
+        "page_script_hash": "8acb967db2a5827d7f2a802be0ed906b",
+        "page_name": "LinguaSense",
+        "icon": "",
+        "script_path": "/workspaces/EduVerse/pages/5_LinguaSense.py"
+    },
+    "b6810764218844d16e593acdc7eb47c2": {
+        "page_script_hash": "b6810764218844d16e593acdc7eb47c2",
         "page_name": "VideoLink",
         "icon": "",
-        "script_path": "/workspaces/EduVerse/pages/5_VideoLink.py"
+        "script_path": "/workspaces/EduVerse/pages/6_VideoLink.py"
     }
 }

@@ -7,6 +7,8 @@ clientId = "MxxNJ7qlS1CLzusDdY10wIjYYStaswk4"
 auth0_client_secret = "AhmJasxlnHfhl2Eop4krFvO_JEW9OTmuD7twFoU6xpX6ZBbMsKnUDMziuc4ZGRg2"
 
 st.set_page_config( 
+     page_title="EduVerse", 
+     page_icon="🏫",
      layout="wide", 
      initial_sidebar_state="expanded", 
  ) 
@@ -46,6 +48,8 @@ left_co, cent_co,last_co = st.columns(3)
 with cent_co:
     st.image("images/logo.png", width=200)
 
+styled_text = gradient_text(text, color1, color2)
+st.write(f"<div style='text-align: center;'>{styled_text}</div>", unsafe_allow_html=True)
 
 text="Empowering Mind, Unlocking Knowledge"
 styled_text = gradient(text, color1, color2)

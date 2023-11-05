@@ -8,6 +8,12 @@ endpoint = "https://edusynthpro.cognitiveservices.azure.com/"
 credential = AzureKeyCredential(key)
 text_analytics_client = TextAnalyticsClient(endpoint, credential)
 
+st.set_page_config( 
+     page_title="EduVerse", 
+     page_icon="🏫",
+     layout="wide", 
+     initial_sidebar_state="expanded", 
+ ) 
 # Streamlit app
 def main():
 

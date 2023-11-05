@@ -8,6 +8,13 @@ endpoint = 'https://edusynthpro.cognitiveservices.azure.com/'
 
 credential = AzureKeyCredential(key)
 
+st.set_page_config( 
+     page_title="EduVerse", 
+     page_icon="🏫",
+     layout="wide", 
+     initial_sidebar_state="expanded", 
+ ) 
+
 import docx
 
 def bot_response(knowledge, question):
