@@ -156,7 +156,6 @@ text-align: center;
 
 
     user_info=login_button(clientId, domain = domain)
-    st.snow()
     st.write(user_info)
     if user_info:
         st.session_state["username"]=user_info["name"]

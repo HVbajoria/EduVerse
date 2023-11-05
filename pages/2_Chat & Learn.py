@@ -3,8 +3,8 @@ from azure.ai.language.questionanswering import QuestionAnsweringClient
 from azure.ai.language.questionanswering import models as qna
 import streamlit as st
 
-key = "9affdbfa912e48819916ad661e0deb27"
-endpoint = 'https://edusynthpro.cognitiveservices.azure.com/'
+key = st.secrets['LANGUAGE_KEY']
+endpoint = st.secrets['CHATBOT_ENDPOINT']
 
 credential = AzureKeyCredential(key)
 

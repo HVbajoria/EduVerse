@@ -7,8 +7,8 @@ from languages import languages
 from docx import Document
 from gtts import gTTS
 
-key = "9affdbfa912e48819916ad661e0deb27"
-endpoint = "https://edusynthpro.cognitiveservices.azure.com/"
+key = st.secrets['LANGUAGE_KEY']
+endpoint = st.secrets['LANGUAGE_ENDPOINT']
 
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential

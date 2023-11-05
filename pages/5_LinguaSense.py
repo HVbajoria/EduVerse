@@ -11,8 +11,8 @@ from azure.core.credentials import AzureKeyCredential
 from azure.ai.textanalytics import TextAnalyticsClient
 from dotenv import dotenv_values
 
-key = "9affdbfa912e48819916ad661e0deb27"
-endpoint = "https://edusynthpro.cognitiveservices.azure.com/"
+key = st.secrets['key_sentiment']
+endpoint = st.secret['endpoint_sentiment']
 
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
