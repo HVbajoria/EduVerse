@@ -169,7 +169,7 @@ text-align: center;
     
     if logged_in:
         show_all_pages()
-        hide_page(DEFAULT_PAGE.replace(".py", ""))
+        # hide_page(DEFAULT_PAGE.replace(".py", ""))
         logged_in=False
         user_info=""
         switch_page('welcome')
