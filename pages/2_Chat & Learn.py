@@ -90,7 +90,36 @@ def runner():
                 help="Click to download the conversation."
             ) 
 
-st.title("Chat & Learn")
+
+def gradient_text(text, color1, color2):
+    gradient_css = f"""
+        background: -webkit-linear-gradient(left, {color1}, {color2});
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        font-size: 42px;
+    """
+    return f'<span style="{gradient_css}">{text}</span>'
+
+def gradient(text, color1, color2):
+    gradient_css = f"""
+        background: -webkit-linear-gradient(left, {color2}, {color1});
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 22px;
+    """
+    return f'<span style="{gradient_css}">{text}</span>'
+
+
+color1 = "#0d3270"
+color2 = "#0fab7b"
+text = "Chat & Learn"
+
+styled_text = gradient_text(text, color1, color2)
+st.write(f"<div style='text-align: center;'>{styled_text}</div>", unsafe_allow_html=True)
+styled_text = gradient("Explore, Learn while chatting about yout text", color1, color2)
+st.write(f"<div style='text-align: center;'>{styled_text}</div>", unsafe_allow_html=True)
+st.subheader("Weclome "+st.session_state["username"]+" 👋")
 
 first_run = st.session_state.get("first_run", True)
 

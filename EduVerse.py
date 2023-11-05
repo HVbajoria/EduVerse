@@ -75,14 +75,6 @@ def hide_page(name: str):
 
 clear_all_but_first_page()
 
-
-
-# Password and email fetch
-def login_user(email, password):
-    return "hi"
-
-
-
 if "logged_in" not in st.session_state:
     st.session_state["logged_in"] = False
 
@@ -119,56 +111,66 @@ def main():
 
     styled_text = gradient_text(text, color1, color2)
     st.write(f"<div style='text-align: center;'>{styled_text}</div>", unsafe_allow_html=True)
-    st.title("Welcome to EduVerse!")
-    menu = ["Login", "SignUp"]
-    choice = st.selectbox(
-        "Select Login or SignUp from dropdown box ▾",
-        menu,
-    )
+    
+    st.markdown(""" 
+        #### Welcome to EduVerse - Empowering Minds, Unlocking Knowledge
+
+        1. **Chat & Learn**: Empower your knowledge with a chatbot that lets you create a smart knowledge base, ask questions, and save the conversation using Azure Conversational AI service.
+              
+        2. **VideoLink**: Dive into learning with ease! Our Video Searcher finds the most relevant learning videos on any topic using the Azure Bing Search API service.
+   
+        3. **Keyword-Powered Notes**: Take notes like a pro! Our Note Maker extracts keywords and lets you download them in bold format - powered by Azure Keyword Extractor Feature.
+   
+        4. **LinguaBrief**: Unlock the power of instant translation and summarization with our Text Summarizer, backed by Azure AI Text Summarizer and Translator.
+        """)
+
     st.markdown(
-        "<h10 style='text-align: left; color: #ffffff;'> If you do not have an account, create an accouunt by select SignUp option from above dropdown box.</h10>",
+        "<h10 style='text-align: left; color: #ffffff;'> If you do not have an account, create an accouunt by select SignUp option.</h10>",
         unsafe_allow_html=True,
     )
-    if choice == "":
-        st.subheader("Login")
-    elif choice == "Login":
-        st.write("-------")
-        st.subheader("Log in to the App")
 
-        user_info=login_button(clientId, domain = domain)
-        st.write(user_info)
-            # # if password == '12345':
-            # # Hash password creation and store in a table
+    
+    footer="""<style>
 
-            # result = login_user(email,password)
-            # if result:
-            #     st.session_state["logged_in"] = True
+a:hover,  a:active {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
 
-            #     st.success("Logged In as {}".format(email))
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+color: black;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Developed with ❤️ by <a style='display: inline; text-align: center;' href="https://www.linkedin.com/in/harshavardhan-bajoria/" target="_blank">Harshavardhan Bajoria</a></p>
+</div>
+    """
+    st.markdown(footer,unsafe_allow_html=True)
 
-            #     if st.success:
-            #         st.subheader("User Profiles")
+
+    user_info=login_button(clientId, domain = domain)
+    st.snow()
+    st.write(user_info)
+    if user_info:
+        st.session_state["username"]=user_info["name"]
+        st.session_state["logged_in"] = True
+
+        st.success("Logged In as {}".format(user_info["name"]))
+
+        if st.success:
+            st.subheader("User Detail")
+            st.write(user_info)
                    
-            # else:
-            #     st.warning("Incorrect Username/Password")
-    elif choice == "SignUp":
-        st.write("-----")
-        st.subheader("Create New Account")
-        new_user = st.text_input("Username", placeholder="name")
-        new_user_email = st.text_input("Email id", placeholder="email")
-        new_password = st.text_input("Password", type="password")
-
-        if st.button("Signup"):
-            if new_user == "":  # if user name empty then show the warnings
-                st.warning("Inavlid user name")
-            elif new_user_email == "":  # if email empty then show the warnings
-                st.warning("Invalid email id")
-            elif new_password == "":  # if password empty then show the warnings
-                st.warning("Invalid password")
-            else:
-                st.success("You have successfully created a valid Account")
-                st.info("Go up and Login to you account")
-
+        else:
+            st.warning("Incorrect Username/Password")
+    
     if st.session_state["logged_in"]:
         show_all_pages()
         hide_page(DEFAULT_PAGE.replace(".py", ""))
