@@ -1,7 +1,8 @@
 import streamlit as st
 import streamlit.components.v1 as components
 from auth0_component import login_button
-
+from streamlit.source_util import _on_pages_changed, get_pages
+from streamlit_extras.switch_page_button import switch_page
 
 domain = "dev-qzlbx0jqzsgjkeaf.us.auth0.com"
 clientId = "MxxNJ7qlS1CLzusDdY10wIjYYStaswk4"
@@ -12,6 +13,7 @@ from EduVerse import clear_all_but_first_page
 if 'username' not in st.session_state:
     clear_all_but_first_page()
     st.session_state["username"]="User"
+    switch_page('eduverse')
 
 hide_default_format = """ 
         <style> 
