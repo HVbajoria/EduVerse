@@ -6,9 +6,6 @@ import streamlit as st
 from streamlit.source_util import _on_pages_changed, get_pages
 from streamlit_extras.switch_page_button import switch_page
 from auth0_component import login_button
-from localStoragePy import localStoragePy
-
-localStorage = localStoragePy('eduverse', 'json')
 
 domain = "dev-qzlbx0jqzsgjkeaf.us.auth0.com"
 clientId = "MxxNJ7qlS1CLzusDdY10wIjYYStaswk4"
@@ -79,7 +76,7 @@ def hide_page(name: str):
 
 clear_all_but_first_page()
 
-localStorage.setItem("logged_in", "False")
+logged_in = False
 
 st.session_state["username"]="User"
 
@@ -132,7 +129,6 @@ def main():
         "<h10 style='text-align: left; color: #ffffff;'> If you do not have an account, create an accouunt by select SignUp option.</h10>",
         unsafe_allow_html=True,
     )
-    st.write(localStorage.getItem("logged_in"))
     footer="""<style>
 
 a:hover,  a:active {
@@ -162,7 +158,7 @@ text-align: center;
     st.write(user_info)
     if user_info:
         st.session_state["username"]=user_info["name"]
-        localStorage.setItem("logged_in","True")
+        logged_in = True
 
         st.success("Logged In as {}".format(user_info["name"]))
 
@@ -173,10 +169,10 @@ text-align: center;
         else:
             st.warning("Incorrect Username/Password")
     
-    if localStorage.getItem("logged_in")=="True":
+    if logged_in:
         show_all_pages()
         hide_page(DEFAULT_PAGE.replace(".py", ""))
-        localStorage.setItem("logged_in","False")
+        logged_in=False
         switch_page('welcome')
     else:
         clear_all_but_first_page()
