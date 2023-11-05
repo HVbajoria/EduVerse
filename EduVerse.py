@@ -17,13 +17,13 @@ auth0_client_secret = "AhmJasxlnHfhl2Eop4krFvO_JEW9OTmuD7twFoU6xpX6ZBbMsKnUDMziu
 
 DEFAULT_PAGE = "EduVerse.py"
 SECOND_PAGE_NAME = "welcome"
-st.snow()
+
 
 st.set_page_config( 
      page_title="EduVerse", 
      page_icon="🏫", 
  ) 
-
+st.snow()
 def get_all_pages():
     default_pages = get_pages(DEFAULT_PAGE)
 
@@ -81,6 +81,7 @@ clear_all_but_first_page()
 
 localStorage.setItem("logged_in", "false")
 
+st.session_state["username"]="User"
 
 # Main function
 def main():
