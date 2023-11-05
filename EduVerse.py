@@ -153,7 +153,6 @@ text-align: center;
 
 
     user_info=login_button(clientId, domain = domain)
-    st.write(user_info)
     st.write(logged_in)
     if user_info:
         st.session_state["username"]=user_info["name"]

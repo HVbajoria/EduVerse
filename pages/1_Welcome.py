@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 from auth0_component import login_button
+from EduVerse import clear_all_but_first_page
 
 domain = "dev-qzlbx0jqzsgjkeaf.us.auth0.com"
 clientId = "MxxNJ7qlS1CLzusDdY10wIjYYStaswk4"
@@ -14,7 +15,9 @@ st.set_page_config(
  ) 
 
 if 'username' not in st.session_state:
+    clear_all_but_first_page()
     st.session_state["username"]="User"
+    
 hide_default_format = """ 
         <style> 
         footer {visibility: hidden;} 
