@@ -79,7 +79,7 @@ def hide_page(name: str):
 
 clear_all_but_first_page()
 
-localStorage.setItem("logged_in", "false")
+localStorage.setItem("logged_in", "False")
 
 st.session_state["username"]="User"
 
@@ -132,8 +132,7 @@ def main():
         "<h10 style='text-align: left; color: #ffffff;'> If you do not have an account, create an accouunt by select SignUp option.</h10>",
         unsafe_allow_html=True,
     )
-
-    
+    st.write(localStorage.getItem("logged_in"))
     footer="""<style>
 
 a:hover,  a:active {
