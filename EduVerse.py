@@ -5,6 +5,12 @@ from pathlib import Path
 import streamlit as st
 from streamlit.source_util import _on_pages_changed, get_pages
 from streamlit_extras.switch_page_button import switch_page
+from auth0_component import login_button
+
+domain = "dev-qzlbx0jqzsgjkeaf.us.auth0.com"
+clientId = "MxxNJ7qlS1CLzusDdY10wIjYYStaswk4"
+auth0_client_secret = "AhmJasxlnHfhl2Eop4krFvO_JEW9OTmuD7twFoU6xpX6ZBbMsKnUDMziuc4ZGRg2"
+
 
 DEFAULT_PAGE = "EduVerse.py"
 SECOND_PAGE_NAME = "welcome"
@@ -129,25 +135,22 @@ def main():
         st.write("-------")
         st.subheader("Log in to the App")
 
-        email = st.text_input("User Name", placeholder="email")
+        user_info=login_button(clientId, domain = domain)
+        st.write(user_info)
+            # # if password == '12345':
+            # # Hash password creation and store in a table
 
-        password = st.text_input("Password", type="password")
+            # result = login_user(email,password)
+            # if result:
+            #     st.session_state["logged_in"] = True
 
-        if st.button("Login"):
-            # if password == '12345':
-            # Hash password creation and store in a table
+            #     st.success("Logged In as {}".format(email))
 
-            result = login_user(email,password)
-            if result:
-                st.session_state["logged_in"] = True
-
-                st.success("Logged In as {}".format(email))
-
-                if st.success:
-                    st.subheader("User Profiles")
+            #     if st.success:
+            #         st.subheader("User Profiles")
                    
-            else:
-                st.warning("Incorrect Username/Password")
+            # else:
+            #     st.warning("Incorrect Username/Password")
     elif choice == "SignUp":
         st.write("-----")
         st.subheader("Create New Account")
