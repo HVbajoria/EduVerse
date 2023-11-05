@@ -154,6 +154,7 @@ text-align: center;
 
     user_info=login_button(clientId, domain = domain)
     st.write(user_info)
+    st.write(logged_in)
     if user_info:
         st.session_state["username"]=user_info["name"]
         logged_in = True
@@ -168,10 +169,11 @@ text-align: center;
             st.warning("Incorrect Username/Password")
     
     if logged_in:
-        show_all_pages()
-        hide_page(DEFAULT_PAGE.replace(".py", ""))
+        # show_all_pages()
+        # hide_page(DEFAULT_PAGE.replace(".py", ""))
         logged_in=False
-        switch_page('welcome')
+        user_info=""
+        # switch_page('welcome')
     else:
         clear_all_but_first_page()
 
