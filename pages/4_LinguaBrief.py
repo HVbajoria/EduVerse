@@ -109,7 +109,7 @@ def translator(text, to_lang):
     constructed_url = endpoint + path + params
 
     headers = {
-        'Ocp-Apim-Subscription-Key': "0f0eb45d34684b2c99cf39821f4115c1",
+        'Ocp-Apim-Subscription-Key': st.secrets['TRANSLATOR_KEY'],
         'Ocp-Apim-Subscription-Region': "centralindia",
         'Content-type': 'application/json',
         'X-ClientTraceId': str(uuid.uuid4())
